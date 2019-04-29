@@ -2,13 +2,46 @@ body {
 	margin: 0;
 }
 
-main {
+.header {
+	box-shadow: 0 4px 8px 2px lightgray;
+}
+
+.header__content {
+	position: relative;
+	display: flex;
+	max-width: 1600px;
+	margin: 0 auto 60px;
+	padding: 10px 20px;
+	font-size: 1.1em;
+	color: rgb(117, 117, 117);
+}
+
+.header__menu, .header__options {
+	align-self: center;
+}
+
+.header__menu {
+	margin-right: 40px;
+}
+
+.header__options {
+	position: absolute;
+	right: 20px;
+}
+
+.header__title {
+	margin: 0;
+	color: black;
+	font-weight: 600;
+}
+
+.main {
 	display: flex;
 	justify-content: space-between;
 	box-sizing: border-box;
 	min-width: 1200px;
 	max-width: 1600px;
-	padding: 80px 30px 30px;
+	padding: 0 30px 30px;
 	margin: 0 auto;
 }
 
@@ -47,6 +80,10 @@ main {
 	transition: box-shadow 0.4s;
 }
 
+.list__item_selected .list__icon {
+	color: #ff5b68;
+}
+
 .list__item:hover {
 	cursor: pointer;
 	box-shadow: 0 0 2px rgb(117, 117, 117);
@@ -72,6 +109,7 @@ main {
 
 .list__color-container {
 	flex: 1 1 20%;
+	overflow: hidden;
 }
 
 .list__color {
@@ -79,6 +117,25 @@ main {
 	width: 22px;
 	height: 22px;
 	border: 1px solid black;
+	border-radius: 50%;
+
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	outline: none;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+	border-radius: 50%;
+}
+
+input[type="color"]::-webkit-color-swatch {
+	border: none;
 	border-radius: 50%;
 }
 
@@ -92,17 +149,6 @@ main {
 
 .list__text-color {
 	flex: 1 1 80%;
-}
-
-.current-tool {
-	display: none;
-	width: 230px;
-	align-self: flex-start;
-}
-
-.current-tool:hover {
-	cursor: auto;
-	box-shadow: none;
 }
 
 .canvas {
@@ -135,23 +181,8 @@ main {
 	border-radius: 50%;
 }
 
-@media (max-width: 1400px) {
-	.tools__wrap {
-		flex: 1 1 40%;
-		order: -1;
-	}
-
-	.tools__wrap_end {
-		order: 2;
-	}
-
-	.current-tool {
-		order: 1;
-	}
-}
-
 @media (max-width: 1200px) {
-	main {
+	.main {
 		min-width: 100%;
 		width: 100%;
 	}
@@ -177,9 +208,9 @@ main {
 }
 
 @media (max-width: 976px) {
-	main {
+	.main {
 		flex-wrap: wrap;
-		padding: 50px 10px 10px;
+		padding: 0 10px 10px;
 	}
 
 	.tools {
@@ -198,15 +229,11 @@ main {
 		justify-content: center;
 	}
 
-	.list, .current-tool {
+	.list {
 		width: 200px;
 	}
 
 	.list__icon {
-		align-self: center;
-	}
-
-	.current-tool {
 		align-self: center;
 	}
 

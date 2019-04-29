@@ -10,7 +10,19 @@
 	<link rel="stylesheet" href="pallete.css">
 </head>
 <body>
-<main>
+<header class="header">
+	<section class="header__content">
+		<div class="header__menu menu">
+			<div class="menu__button"><i class="fas fa-bars"></i></div>
+		</div>
+		<h3 class="header__title">CodeJam-dom Palette</h3>
+		<div class="header__options options">
+			<div class="options__button"><i class="fas fa-ellipsis-v"></i></div>
+		</div>
+	</section>
+</header>
+
+<main class="main">
 	<section class="tools">
 		<div class="tools__wrap">
 			<ul class="list">
@@ -46,17 +58,18 @@
 					<span class="list__color-container"><span class="list__color list__color_red"></span> </span>
 					<span class="list__text list__text-color">red</span>
 				</li>
-				<li class="list__item list__item_last">
+				<li class="list__item">
 					<span class="list__color-container"><span class="list__color list__color_blue"></span> </span>
 					<span class="list__text list__text-color">blue</span>
 				</li>
+				<li class="list__item list__item_last" id="choose-color">
+					<span class="list__color-container"><input class="list__color" type="color"></span>
+					<span class="list__text list__text-color">Choose color</span>
+				</li>
 			</ul>
 		</div>
-		<div class="current-tool list__item">
-			<span class="list__icon"><i class="fas fa-fill-drip"></i></span>
-			<span class="list__text">Paint bucket</span>
-		</div>
 	</section>
+	
 	<section class="canvas">
 		<div class="canvas__wrap">
 			<div class="canvas__figure"></div>
