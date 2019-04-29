@@ -7,58 +7,69 @@
 	<title>Pallete</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="pallete.css">
 </head>
 <body>
-<section class="tools">
-	<ul class="menu">
-		<li class="menu__item">
-			<span class="menu__img"><i class="fas fa-fill-drip"></i></span>
-			<span class="menu__text">Paint bucket</span>
-		</li>
-		<li class="menu__item menu__item_underline">
-			<span class="menu__img"><i class="fas fa-eye-dropper"></i></span>
-			<span class="menu__text">Choose color</span>
-		</li>
-		<li class="menu__item">
-			<span class="menu__img"><i class="fas fa-arrows-alt"></i></span>
-			<span class="menu__text">Move</span>
-		</li>
-		<li class="menu__item">
-			<span class="menu__img"><i class="fas fa-exchange-alt"></i></span>
-			<span class="menu__text">Transform</span>
-		</li>
-	</ul>
-	<ul class="palette">
-		<li class="palette__item">
-			<span class="palette__color"></span>
-			<span class="palette__text">Current color</span>
-		</li>
-		<li class="palette__item palette__item_underline">
-			<span class="palette__color"></span>
-			<span class="palette__text">Prev color</span>
-		</li>
-		<li class="palette__item">
-			<span class="palette__color"></span>
-			<span class="palette__text">red</span>
-		</li>
-		<li class="palette__item">
-			<span class="palette__color"></span>
-			<span class="palette__text">blue</span>
-		</li>
-	</ul>
-</section>
-<section class="canvas">
-	<div class="figures">
-		<div class="figures__figure"></div>
-		<div class="figures__figure"></div>
-		<div class="figures__figure"></div>
-		<div class="figures__figure"></div>
-		<div class="figures__figure"></div>
-		<div class="figures__figure"></div>
-		<div class="figures__figure"></div>
-		<div class="figures__figure"></div>
-		<div class="figures__figure"></div>
-	</div>
-</section>
+<main>
+	<section class="tools">
+		<div class="tools__wrap">
+			<ul class="list">
+				<li class="list__item">
+					<span class="list__icon"><i class="fas fa-fill-drip"></i></span>
+					<span class="list__text">Paint bucket</span>
+				</li>
+				<li class="list__item list__item_underline">
+					<span class="list__icon"><i class="fas fa-eye-dropper"></i></span>
+					<span class="list__text">Choose color</span>
+				</li>
+				<li class="list__item">
+					<span class="list__icon"><i class="fas fa-arrows-alt"></i></span>
+					<span class="list__text">Move</span>
+				</li>
+				<li class="list__item list__item_last">
+					<span class="list__icon"><i class="fas fa-exchange-alt"></i></span>
+					<span class="list__text">Transform</span>
+				</li>
+			</ul>
+		</div>
+		<div class="tools__wrap tools__wrap_end">
+			<ul class="list">
+				<li class="list__item">
+					<div class="list__color-container"><span class="list__color"></span></div>
+					<span class="list__text list__text-color">Current color</span>
+				</li>
+				<li class="list__item list__item_underline">
+					<span class="list__color-container"><span class="list__color"></span> </span>
+					<span class="list__text list__text-color">Prev color</span>
+				</li>
+				<li class="list__item">
+					<span class="list__color-container"><span class="list__color list__color_red"></span> </span>
+					<span class="list__text list__text-color">red</span>
+				</li>
+				<li class="list__item list__item_last">
+					<span class="list__color-container"><span class="list__color list__color_blue"></span> </span>
+					<span class="list__text list__text-color">blue</span>
+				</li>
+			</ul>
+		</div>
+		<div class="current-tool list__item">
+			<span class="list__icon"><i class="fas fa-fill-drip"></i></span>
+			<span class="list__text">Paint bucket</span>
+		</div>
+	</section>
+	<section class="canvas">
+		<div class="canvas__wrap">
+			<div class="canvas__figure"></div>
+			<div class="canvas__figure"></div>
+			<div class="canvas__figure"></div>
+			<div class="canvas__figure"></div>
+			<div class="canvas__figure"></div>
+			<div class="canvas__figure"></div>
+			<div class="canvas__figure canvas__figure_circle"></div>
+			<div class="canvas__figure"></div>
+			<div class="canvas__figure"></div>
+		</div>
+	</section>
+</main>
 </body>
 </html>
