@@ -23,30 +23,31 @@
 </header>
 
 <main class="main">
-	<section class="tools">
+	<section class="tools" id="tools">
 		<div class="tools__wrap">
 			<ul class="list">
-				<li class="list__item">
+				<li class="list__item" data-type="paint_bucket">
 					<span class="list__icon"><i class="fas fa-fill-drip"></i></span>
 					<span class="list__text">Paint bucket</span>
 				</li>
-				<li class="list__item list__item_underline">
+				<li class="list__item list__item_underline" data-type="choose_color">
 					<span class="list__icon"><i class="fas fa-eye-dropper"></i></span>
 					<span class="list__text">Choose color</span>
 				</li>
-				<li class="list__item">
+				<li class="list__item" data-type="move">
 					<span class="list__icon"><i class="fas fa-arrows-alt"></i></span>
 					<span class="list__text">Move</span>
 				</li>
-				<li class="list__item list__item_last">
+				<li class="list__item list__item_last" data-type="transform">
 					<span class="list__icon"><i class="fas fa-exchange-alt"></i></span>
 					<span class="list__text">Transform</span>
 				</li>
 			</ul>
 		</div>
+		
 		<div class="tools__wrap tools__wrap_end">
 			<ul class="list">
-				<li class="list__item">
+				<li class="list__item" data-type="color">
 					<div class="list__color-container"><span class="list__color"></span></div>
 					<span class="list__text list__text-color">Current color</span>
 				</li>
@@ -54,11 +55,11 @@
 					<span class="list__color-container"><span class="list__color"></span> </span>
 					<span class="list__text list__text-color">Prev color</span>
 				</li>
-				<li class="list__item">
+				<li class="list__item" data-type="color">
 					<span class="list__color-container"><span class="list__color list__color_red"></span> </span>
 					<span class="list__text list__text-color">red</span>
 				</li>
-				<li class="list__item">
+				<li class="list__item" data-type="color">
 					<span class="list__color-container"><span class="list__color list__color_blue"></span> </span>
 					<span class="list__text list__text-color">blue</span>
 				</li>
@@ -72,15 +73,15 @@
 	
 	<section class="canvas">
 		<div class="canvas__wrap">
-			<div class="canvas__figure"></div>
-			<div class="canvas__figure"></div>
-			<div class="canvas__figure"></div>
-			<div class="canvas__figure"></div>
-			<div class="canvas__figure"></div>
-			<div class="canvas__figure"></div>
-			<div class="canvas__figure canvas__figure_circle"></div>
-			<div class="canvas__figure"></div>
-			<div class="canvas__figure"></div>
+			<div class="canvas__figure" data-type="figure"></div>
+			<div class="canvas__figure" data-type="figure"></div>
+			<div class="canvas__figure" data-type="figure"></div>
+			<div class="canvas__figure" data-type="figure"></div>
+			<div class="canvas__figure" data-type="figure"></div>
+			<div class="canvas__figure" data-type="figure"></div>
+			<div class="canvas__figure canvas__figure_circle" data-type="figure"></div>
+			<div class="canvas__figure" data-type="figure"></div>
+			<div class="canvas__figure" data-type="figure"></div>
 		</div>
 	</section>
 </main>
