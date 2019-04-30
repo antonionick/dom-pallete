@@ -155,7 +155,6 @@ input[type="color"]::-webkit-color-swatch {
 	display: flex;
 	justify-content: flex-end;
 	flex: 1 1 60%;
-
 }
 
 .canvas__wrap {

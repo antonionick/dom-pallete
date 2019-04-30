@@ -35,6 +35,13 @@ class Events {
             list.classList.remove("list__item_selected");
         }
         this._type.action = null;
+
+        if (this._type.onmove) {
+            document.onmousedown = null;
+            document.onmousemove = null;
+            document.onmouseup = null;
+            this._type.onmove = false;
+        }
     }
 }
 
