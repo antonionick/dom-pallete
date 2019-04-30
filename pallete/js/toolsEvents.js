@@ -4,16 +4,36 @@ class ToolsEvents extends Events {
     constructor(action, document) {
         super(...arguments);
         this._tools = [];
+        this._toolsBlocks = [];
     }
 
     startEvents() {
-        const toolsBlock = this.document.getElementById("tools");
-        this._tools = [].map.call(toolsBlock.querySelectorAll(".list > .list__item"), item => {
+        this._toolsBlocks = this.document.getElementById("tools");
+        this._tools = [].map.call(this._toolsBlocks.querySelectorAll(".list > .list__item"), item => {
             return item.dataset.type;
         });
 
-        toolsBlock.onclick = this._selectTools.bind(this);
+        this._toolsBlocks.onclick = this._selectTools.bind(this);
         this.document.documentElement.addEventListener("click", this._clickHandler.bind(this));
+        this.document.documentElement.addEventListener("keypress", this._selectKey.bind(this));
+
+    }
+
+    _selectKey(e) {
+        switch (e.charCode) {
+            case 112:
+            case 80: this._toolsBlocks.querySelectorAll(".list__item")[0].click();
+                break;
+            case 99:
+            case 67: this._toolsBlocks.querySelectorAll(".list__item")[1].click();
+                break;
+            case 109:
+            case 77: this._toolsBlocks.querySelectorAll(".list__item")[2].click();
+                break;
+            case 116:
+            case 84: this._toolsBlocks.querySelectorAll(".list__item")[3].click();
+                break;
+        }
     }
 
     _selectTools(e) {
